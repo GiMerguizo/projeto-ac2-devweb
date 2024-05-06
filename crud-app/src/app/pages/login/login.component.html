@@ -13,9 +13,13 @@
               <form [formGroup]="loginForm">
 
                 <div class="form-outline form-white mb-4">
+                  
+                  <label class="form-label" for="typeEmailX">Email</label>
+                  <input type="email" id="typeEmailX" class="form-control form-control-lg" formControlName="email"/>
+                  
                   <!-- ERROR -->
                   <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
-                    <div class="text-danger">Email é obrigatório</div>
+                    <div class="text-danger">Campo obrigatório</div>
                   </div>
                   <!-- ERROR -->
 
@@ -25,22 +29,21 @@
                   </div>
                   <!-- ERROR -->
 
-                  <input type="email" id="typeEmailX" class="form-control form-control-lg" formControlName="email"/>
-                  <label class="form-label" for="typeEmailX">Email</label>
-
                 </div>
 
 
 
                 <div class="form-outline form-white mb-4">
+                  
+                  <label class="form-label" for="typePasswordX">Password</label>
+                  <input type="password" id="typePasswordX" class="form-control form-control-lg"  formControlName="password"/>
+                  
                   <!-- ERROR -->
                   <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
-                    <div class="text-danger">Senha é um campo obrigatório</div>
+                    <div class="text-danger">Campo obrigatório</div>
                   </div>
                   <!-- ERROR -->
 
-                  <input type="password" id="typePasswordX" class="form-control form-control-lg"  formControlName="password"/>
-                  <label class="form-label" for="typePasswordX">Password</label>
                 </div>
 
                 <button class="btn btn-outline-light btn-lg px-5" (click)="login()" [disabled]="!loginForm.valid">Login</button>
