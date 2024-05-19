@@ -1,8 +1,32 @@
 <div class="container-fluid">
-  <div class="row  align-items-center text-center full-height">
-    <div class="col">
-      <h1>Welcome to users page</h1>
-      <h2>Here you can start building your amazing angular application</h2>
+  <div class="row align-items-left text-left">
+    <div class="col content">
+      <table class="table table-dark table-hover table-item text-center">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Função</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of taskList" [ngClass]="{'task-done': task.done}" (click)="changeTask(task)">
+            <th scope="row"></th>
+            <td>{{ task.description }}</td>
+            <td>
+              <input class="form-check-input" type="checkbox" [(ngModel)]="task.done" [checked]="task.done">
+            </td>
+            <th scope="row"></th>
+            <th>
+              <img width="30" height="30" src="https://img.icons8.com/badges/48/pencil.png" alt="pencil"/>
+              <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/close-window.png" alt="close-window"/>
+            </th>
+          </tr>
+        </tbody>
+        <tfoot><button type="button" class="btn btn-outline-dark" id="btn-new">NEW</button></tfoot>
+      </table>
     </div>
   </div>
 </div>
