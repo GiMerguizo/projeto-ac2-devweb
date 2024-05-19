@@ -7,6 +7,7 @@ import { WelcomeComponent } from './pages/home/components/welcome/welcome.compon
 import { TodoListComponent } from './pages/home/pages/todo-list/todo-list.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AddUserComponent } from './pages/home/pages/add-user/add-user.component';
+import { EditUserComponent } from './pages/home/pages/edit-user/edit-user.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "/login", pathMatch: 'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
       {path: "", component: WelcomeComponent},
       {path: "users", component: UsersComponent},
       {path: "todo-list", component: TodoListComponent},
-      {path: "add-user", component: AddUserComponent}
+      {path: "add-user", component: AddUserComponent},
+      {path: "edit-user", component: EditUserComponent}
     ]
   }
 ]
