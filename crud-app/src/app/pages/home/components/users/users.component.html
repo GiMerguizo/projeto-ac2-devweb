@@ -20,12 +20,14 @@
             </td>
             <th scope="row"></th>
             <th>
-              <img width="30" height="30" src="https://img.icons8.com/badges/48/pencil.png" alt="pencil"/>
-              <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/close-window.png" alt="close-window"/>
+              <img width="30" height="30" src="https://img.icons8.com/badges/48/pencil.png" alt="pencil" (click)="onEdit()"/>
+              <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/close-window.png" alt="close-window" (click)="onDelete()"/>
             </th>
           </tr>
         </tbody>
-        <tfoot><button type="button" class="btn btn-outline-dark" id="btn-new">NEW</button></tfoot>
+        <div class="d-flex justify-content-center">
+          <button (click)="onSubmit()" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">NEW</button>
+        </div>
       </table>
     </div>
   </div>

@@ -23,7 +23,7 @@ export class AddUserComponent {
     console.log("New user added with success!")
     console.log(this.signupForm.value);
 
-    this.router.navigate(["/"])
+    this.router.navigate(["/app/users"])
   }
 
 }
