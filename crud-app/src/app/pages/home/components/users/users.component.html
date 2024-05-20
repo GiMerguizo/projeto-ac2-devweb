@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row align-items-left text-left">
+    <div class="col content">
+      <table class="table table-dark table-hover table-item text-center">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Função</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of taskList" [ngClass]="{'task-done': task.done}">
+            <th scope="row"></th>
+            <td>{{ task.description }}</td>
+            <th scope="row"></th>
+            <th scope="row"></th>
+            <th>
+              <img width="30" height="30" src="https://img.icons8.com/badges/48/pencil.png" alt="pencil" (click)="onEdit()"/>
+              <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/close-window.png" alt="close-window" (click)="changeTask(task)"/>
+            </th>
+          </tr>
+        </tbody>
+        <div class="d-flex justify-content-center">
+          <button (click)="onSubmit()" class="btn btn-outline-dark" id="new">NEW</button>
+        </div>
+      </table>
+    </div>
+  </div>
+</div>
