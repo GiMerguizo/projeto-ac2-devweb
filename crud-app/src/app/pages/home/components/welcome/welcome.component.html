@@ -1,23 +1,59 @@
 <div class="container-fluid">
   <div class="row align-items-left text-left">
     <div class="col content">
+      <h2>Quantidade de Usuários Cadastrados</h2>
       <table class="table table-dark table-hover table-item text-center">
         <thead>
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">#</th>
             <th scope="col">Nome</th>
-            <th scope="col">Função</th>
-            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let task of taskList" [ngClass]="{'task-done': task.done}" (click)="changeTask(task)">
+          <tr *ngFor="let task of taskList" [ngClass]="{'task-done': task.done}">
             <th scope="row"></th>
             <td>{{ task.description }}</td>
-            <td>
-              <input class="form-check-input" type="checkbox" [(ngModel)]="task.done" [checked]="task.done">
-            </td>
-            <th scope="row"></th>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ totalTasks }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col content">
+      <h2>Quantidade de Usuários por Função</h2>
+      <table class="table table-dark table-hover table-item text-center">
+        <thead>
+          <tr>
+            <th scope="col">Função</th>
+            <th scope="col">Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Engenheiro de FE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Engenheiro de BE</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Analista de Dados</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Líder Técnico</td>
+            <td></td>
           </tr>
         </tbody>
       </table>

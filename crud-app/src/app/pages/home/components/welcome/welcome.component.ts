@@ -26,4 +26,12 @@ export class WelcomeComponent {
     task.done = !task.done
   }
 
+  get totalTasks(): number {
+    return this.taskList.length;
+  }
+
+  get completedTasks(): number {
+    return this.taskList.filter(task => task.done).length;
+  }
+
 }

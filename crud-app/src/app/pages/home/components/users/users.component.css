@@ -17,3 +17,12 @@
 .task-done {
   text-decoration: line-through;
 }
+
+th img {
+  margin-right: 10px;
+}
+
+#new {
+  margin: 10px;
+  margin-top: 20px;
+}
