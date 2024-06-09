@@ -8,7 +8,7 @@ app.use(express.json())
 const usarioRouter = require('./controllers/usersController');
 app.use('/users', usarioRouter);
 
-mongoose.connect("mongodb+srv://admin:admin@crud-app.f6k2zig.mongodb.net/crud-app?retryWrites=true&w=majority&appName=CRUD-APP")
+mongoose.connect("")
 .then(() => {
     app.listen(porta, () => {
         console.log('Conectado ao mongoDB');
