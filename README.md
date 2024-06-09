@@ -7,3 +7,8 @@ Entrega do Projeto da AC2 da Faculdade com Front-end e Back-end
 - Html
 - CSS
 - Bootstrap
+
+## Parte 2 - Backend
+- NodeJS
+- Express
+- Mongo Atlas
