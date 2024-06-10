@@ -12,3 +12,12 @@ Entrega do Projeto da AC2 da Faculdade com Front-end e Back-end
 - NodeJS
 - Express
 - Mongo Atlas
+
+### Comandos
+- `npm install express`
+- `npm install mongoose`
+- `npm install jsonwebtoken`
+- `npm install bcryptjs`
+- `npm install dotenv`
+<br>
+Iniciar projeto: `npm run dev`
