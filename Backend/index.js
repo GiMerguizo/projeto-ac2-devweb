@@ -17,8 +17,8 @@ const DB_URL = `mongodb+srv://${DB_USER}:${DB_PASS}@crud-app.f6k2zig.mongodb.net
 servidor.use("/login", loginController)
 servidor.use("/users", usersController)
 
-// const usarioRouter = require('./controllers/authentication/usersController');
-// app.use('/users', usarioRouter);
+const usarioRouter = require('./controllers/authentication/usersController');
+app.use('/users', usarioRouter);
 
 mongoose.connect(DB_URL)
 .then(() => {

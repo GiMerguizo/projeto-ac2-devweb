@@ -2,10 +2,12 @@ const { randomUUID } = require('crypto')
 const bcrypt = require('bcryptjs');
 const auth = require("../../middlewares/authentication");
 const UserModel = require("../../models/user")
-
+const jwt = require('jsonwebtoken');
 
 const express = require('express');
 const router = express.Router();
+
+const validRoles = ['Engenheiro de FE', 'Engenheiro de BE', 'Analista de dados', 'Líder Técnico'];
 
 var users = []
 
